@@ -29,6 +29,8 @@ select {
   padding: 10px;
   border-radius: 10px;
   transition: ease-in-out 2ms;
+  border-color: rgba(206, 83, 104, 0.421);
+  color: rgb(55, 55, 55);
 }
 
 select:hover {
