@@ -27,9 +27,11 @@ function updateTime() {
   milanDateElement.innerHTML = milanTime.format("MMMM Do YYYY");
   milanTimeElement.innerHTML = milanTime.format("H:mm:ss [<small>]A[</small>]");
 }
-
 function updateCity(event) {
   let cityTimeZone = event.target.value;
+  if (cityTimeZone === "current") {
+    cityTimeZone = moment().tz.guess();
+  }
   let cityTime = moment().tz(cityTimeZone);
   let cityName = cityTimeZone.split("/")[1];
   let citiesElement = document.querySelector(".cities");
